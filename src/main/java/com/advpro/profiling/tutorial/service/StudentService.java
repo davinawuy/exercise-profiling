@@ -25,15 +25,17 @@ public class StudentService {
 
     public List<StudentCourse> getAllStudentsWithCourses() {
         List<Student> students = studentRepository.findAll();
-        List<StudentCourse> studentCourses = new ArrayList<>();
+        java.util.Map<Long, Student> studentMap = new java.util.HashMap<>();
         for (Student student : students) {
-            List<StudentCourse> studentCoursesByStudent = studentCourseRepository.findByStudentId(student.getId());
-            for (StudentCourse studentCourseByStudent : studentCoursesByStudent) {
-                StudentCourse studentCourse = new StudentCourse();
-                studentCourse.setStudent(student);
-                studentCourse.setCourse(studentCourseByStudent.getCourse());
-                studentCourses.add(studentCourse);
-            }
+            studentMap.put(student.getId(), student);
+        }
+        List<StudentCourse> allStudentCourses = studentCourseRepository.findAll();
+        List<StudentCourse> studentCourses = new ArrayList<>();
+        for (StudentCourse sc : allStudentCourses) {
+            StudentCourse studentCourse = new StudentCourse();
+            studentCourse.setStudent(studentMap.get(sc.getStudent().getId()));
+            studentCourse.setCourse(sc.getCourse());
+            studentCourses.add(studentCourse);
         }
         return studentCourses;
     }
