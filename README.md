@@ -8,6 +8,8 @@
 | **All Student Name Query**       | ![Before Optimization](images/allstudentnames1.png)<br>![Before Optimization](images/allstudentnames2.png)<br>![Before Optimization](images/allstudentnames3.png)<br>![Before Optimization](images/allstudentnames4.png)<br>![Before Optimization](images/beforeallstudents.png) | ![After Optimization](images/afteroptimizestudentnames1.png)<br>![After Optimization](images/afteroptimizestudentnames.png)                  | ![Comparison](images/comparisonallstudentnames.png)                                                 |
 | **Highest GPA Query**            | ![Before Optimization](images/highestgpa1.png)<br>![Before Optimization](images/highestgpa2.png)<br>![Before Optimization](images/highestgpa3.png)<br>![Before Optimization](images/highestgpa4.png)<br>![Before Optimization](images/beforehighestgpa.png)                     | ![After Optimization](images/afterhighestgpa.png)<br>![After Optimization](images/afterhighestgparesults.png)                                 | ![Comparison](images/comparehighgpa.png)                                                            |
 
+<h2> Explanation </h2>
+We can see from the changes between the before and after of all the functions that the code has been optimized by atleast 40-95%. This was achieved by constantly testing the new solutions against the old test results while still using the same data and tests. This allowed me to improve and optimize all the code  while maintaining core functionality. I used both Jmeter and IntelliJ profiling to keep the tests and checks fair and ensuring coverage across all functions.
 
 
 
